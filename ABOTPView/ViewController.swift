@@ -27,12 +27,12 @@ class ViewController: UIViewController {
     /// Function Call to setup OTP View
     func setupOTPView()
     {
-        otpView.otpViewDelegate = self
-        otpView.filledBottomBorderColor = .yellow
-        otpView.unfilledBottomBorderColor = .white
-        otpView.enteredOTPViewTextColor = .white
-        otpView.enteredOTPViewFilledColor = .yellow
-        otpView.setInitialOTPView()
+        otpView.otpViewDelegate = self // Set otpViewDelegate as instance of your view controller 'Self'
+        otpView.filledBottomBorderColor = .yellow // Bottom Border Color When OTP is Entered
+        otpView.unfilledBottomBorderColor = .white // Bottom Border Color Where OTP is not Entered
+        otpView.enteredOTPViewTextColor = .white // OTP Entered and is visible/Shown to user eg:- 123445
+        otpView.enteredOTPViewFilledColor = .yellow // OTP Entered and is hidden to user with round circles
+        otpView.setInitialOTPView() // Setup OTP View
     }
 
     //MARK:- IBActions
@@ -46,18 +46,21 @@ class ViewController: UIViewController {
 }
 
 //MARK:- Extensions
-//MARK:- ABOTPCircleViewDelegate
-extension ViewController: ABOTPCircleViewDelegate {
+//MARK:- ABOTPViewDelegate
+extension ViewController: ABOTPViewDelegate {
     
     /// This Function Get's Called When all 6 digit OTP is Entered
     /// - Parameter otp: User Entered OTP Received Here
     func userEnteredOTP(otp: String) {
-        let alert = UIAlertController(title: "", message: "User Entered OTP = \(otp)", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (_) in
-            self.otpView.resetOTPField()
-        }))
-        present(alert, animated: true, completion: nil)
+        print(otp)
     }
     
 }
 
+
+
+//let alert = UIAlertController(title: "", message: "User Entered OTP = \(otp)", preferredStyle: .alert)
+//alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (_) in
+//    self.otpView.resetOTPField()
+//}))
+//present(alert, animated: true, completion: nil)

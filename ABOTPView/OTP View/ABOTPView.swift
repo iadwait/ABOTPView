@@ -8,7 +8,7 @@
 import UIKit
 
 /// Protocol to get OTP in your View Controllers
-protocol ABOTPCircleViewDelegate {
+protocol ABOTPViewDelegate {
     // This Function is Called when all 6 digit OTP is Entered by User
     func userEnteredOTP(otp: String)
 }
@@ -31,7 +31,7 @@ class ABOTPView: UIView {
     let whiteColor = UIColor.white
     let yellowColor = UIColor.yellow
     let blackColor = UIColor.black
-    var otpViewDelegate: ABOTPCircleViewDelegate?
+    var otpViewDelegate: ABOTPViewDelegate?
     //User Usage
     var filledBottomBorderColor: UIColor = UIColor.green
     var unfilledBottomBorderColor: UIColor = UIColor.darkGray
