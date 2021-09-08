@@ -13,6 +13,9 @@
 		DE8700B126E906F400209805 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8700AF26E906F400209805 /* Main.storyboard */; };
 		DE8700B326E906F500209805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE8700B226E906F500209805 /* Assets.xcassets */; };
 		DE8700B626E906F500209805 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8700B426E906F500209805 /* LaunchScreen.storyboard */; };
+		DE8700BF26E9079100209805 /* ABOTPView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE8700BE26E9079100209805 /* ABOTPView.xib */; };
+		DE8700C226E907B000209805 /* ABOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8700C126E907B000209805 /* ABOTPView.swift */; };
+		DE8700C626E9081400209805 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8700C526E9081400209805 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		DE8700B226E906F500209805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE8700B526E906F500209805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE8700B726E906F500209805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE8700BE26E9079100209805 /* ABOTPView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ABOTPView.xib; sourceTree = "<group>"; };
+		DE8700C126E907B000209805 /* ABOTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABOTPView.swift; sourceTree = "<group>"; };
+		DE8700C526E9081400209805 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,50 @@
 		DE8700A826E906F400209805 /* ABOTPView */ = {
 			isa = PBXGroup;
 			children = (
-				DE8700A926E906F400209805 /* AppDelegate.swift */,
+				DE8700C826E9082900209805 /* App Delegate */,
+				DE8700C926E9083000209805 /* Storyboard */,
+				DE8700CA26E9085000209805 /* OTP View */,
+				DE8700CC26E9087300209805 /* Extensions */,
 				DE8700AB26E906F400209805 /* SceneDelegate.swift */,
 				DE8700AD26E906F400209805 /* ViewController.swift */,
-				DE8700AF26E906F400209805 /* Main.storyboard */,
 				DE8700B226E906F500209805 /* Assets.xcassets */,
 				DE8700B426E906F500209805 /* LaunchScreen.storyboard */,
 				DE8700B726E906F500209805 /* Info.plist */,
 			);
 			path = ABOTPView;
+			sourceTree = "<group>";
+		};
+		DE8700C826E9082900209805 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				DE8700A926E906F400209805 /* AppDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		DE8700C926E9083000209805 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DE8700AF26E906F400209805 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		DE8700CA26E9085000209805 /* OTP View */ = {
+			isa = PBXGroup;
+			children = (
+				DE8700C126E907B000209805 /* ABOTPView.swift */,
+				DE8700BE26E9079100209805 /* ABOTPView.xib */,
+			);
+			path = "OTP View";
+			sourceTree = "<group>";
+		};
+		DE8700CC26E9087300209805 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DE8700C526E9081400209805 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +168,7 @@
 				DE8700B626E906F500209805 /* LaunchScreen.storyboard in Resources */,
 				DE8700B326E906F500209805 /* Assets.xcassets in Resources */,
 				DE8700B126E906F400209805 /* Main.storyboard in Resources */,
+				DE8700BF26E9079100209805 /* ABOTPView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE8700C626E9081400209805 /* Extensions.swift in Sources */,
 				DE8700AE26E906F400209805 /* ViewController.swift in Sources */,
 				DE8700AA26E906F400209805 /* AppDelegate.swift in Sources */,
 				DE8700AC26E906F400209805 /* SceneDelegate.swift in Sources */,
+				DE8700C226E907B000209805 /* ABOTPView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
