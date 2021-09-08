@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Nyk-Td-7kt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tox-kp-xzZ" customClass="ABOTPView" customModule="ABOTPView" customModuleProvider="target">
                                 <rect key="frame" x="82" y="418" width="250" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -26,24 +29,31 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J34-1f-CRb">
                                 <rect key="frame" x="122" y="482" width="170" height="40"/>
+                                <color key="backgroundColor" red="0.14509198938387569" green="0.69469293623016615" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="CML-tR-hN2"/>
                                     <constraint firstAttribute="height" constant="40" id="PH3-X0-cCk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Show/Hide"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Show/Hide">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="btnShowHideOTPTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZrZ-st-Zb0"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="J34-1f-CRb" firstAttribute="top" secondItem="tox-kp-xzZ" secondAttribute="bottom" constant="4" id="0KZ-nY-uMs"/>
                             <constraint firstItem="J34-1f-CRb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CQT-ne-f7I"/>
                             <constraint firstItem="tox-kp-xzZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LJM-NZ-7Wc"/>
+                            <constraint firstItem="Nyk-Td-7kt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PRE-p6-da2"/>
                             <constraint firstItem="tox-kp-xzZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RYJ-ZY-DPk"/>
+                            <constraint firstItem="Nyk-Td-7kt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Tgc-S4-SSY"/>
+                            <constraint firstItem="Nyk-Td-7kt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Zgg-PZ-HWZ"/>
+                            <constraint firstItem="Nyk-Td-7kt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="o50-Oy-3SQ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -56,6 +66,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="blueBackground" width="771" height="360"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

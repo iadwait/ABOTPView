@@ -64,6 +64,8 @@ class ABOTPView: UIView {
     /// Function Call to set Initial OTP View
     func setInitialOTPView()
     {
+        self.backgroundColor = .clear
+        
         txtOTP1.tag = 1
         txtOTP2.tag = 2
         txtOTP3.tag = 3
