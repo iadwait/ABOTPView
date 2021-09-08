@@ -15,4 +15,6 @@ Note:- 'otpView' in below image is the name of IBOutlet done in Point 2.(Name ca
 
 <img width="1017" alt="Screenshot 2021-09-08 at 9 32 30 PM" src="https://user-images.githubusercontent.com/30545415/132544322-71361da2-3244-49eb-a544-39c7860bf3fc.png">
 
+5.Show or Hide OTP Fields(Refer Below Image - 'isOTPHidden' is Boolean Variable inside View Controller)<br />
 
+<img width="1017" alt="Screenshot 2021-09-08 at 9 43 09 PM" src="https://user-images.githubusercontent.com/30545415/132545923-9fc659a3-e707-4153-909b-a1a4c67024bd.png">
