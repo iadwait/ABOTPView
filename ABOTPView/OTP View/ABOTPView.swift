@@ -374,6 +374,45 @@ class ABOTPView: UIView {
         }
     }
     
+    /// Function Call to Reset OTP Fields
+    func resetOTPField() {
+        let count = originalText.count
+        switch count {
+        case 1:
+            txtOTP2.resignFirstResponder()
+        case 2:
+            txtOTP3.resignFirstResponder()
+        case 3:
+            txtOTP4.resignFirstResponder()
+        case 4:
+            txtOTP5.resignFirstResponder()
+        case 5:
+            txtOTP6.resignFirstResponder()
+        default:
+            break
+        }
+        
+        originalText = ""
+        curTflTag = 0
+        setBottomBorder(forTextfields: 0)
+        
+        setUnfilledBorderRadius(tfl: txtOTP1)
+        setUnfilledBorderRadius(tfl: txtOTP2)
+        setUnfilledBorderRadius(tfl: txtOTP3)
+        setUnfilledBorderRadius(tfl: txtOTP4)
+        setUnfilledBorderRadius(tfl: txtOTP5)
+        setUnfilledBorderRadius(tfl: txtOTP6)
+        
+        setAllNotHidden()
+        txtOTP1.text = ""
+        txtOTP2.text = ""
+        txtOTP3.text = ""
+        txtOTP4.text = ""
+        txtOTP5.text = ""
+        txtOTP6.text = ""
+        
+    }
+    
     //MARK:- IBActions
     
     @IBAction func btnActivateOTPTapped(_ sender: UIButton) {
