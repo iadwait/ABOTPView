@@ -36,7 +36,6 @@ class ViewController: UIViewController {
     }
 
     //MARK:- IBActions
-    
     /// Function Call when User Tap's on Show Hide OTP
     /// - Parameter sender: UIButton
     @IBAction func btnShowHideOTPTapped(_ sender: UIButton) {
@@ -52,15 +51,11 @@ extension ViewController: ABOTPViewDelegate {
     /// This Function Get's Called When all 6 digit OTP is Entered
     /// - Parameter otp: User Entered OTP Received Here
     func userEnteredOTP(otp: String) {
-        print(otp)
+        let alert = UIAlertController(title: "", message: "User Entered OTP = \(otp)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (_) in
+            self.otpView.resetOTPField()
+        }))
+        present(alert, animated: true, completion: nil)
     }
     
 }
-
-
-
-//let alert = UIAlertController(title: "", message: "User Entered OTP = \(otp)", preferredStyle: .alert)
-//alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (_) in
-//    self.otpView.resetOTPField()
-//}))
-//present(alert, animated: true, completion: nil)
