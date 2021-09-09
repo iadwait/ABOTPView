@@ -140,9 +140,7 @@ class ABOTPView: UIView {
         tfl.backgroundColor = .clear
         tfl.layer.borderColor = UIColor.clear.cgColor
         tfl.layer.borderWidth = 1
-//        tfl.textColor = UIColor.clear
         tfl.textColor = .black
-        //setBottomBorder(forTextfields: tfl.tag)
     }
     
     /// Function ca;; to make textfield not hidden
@@ -296,7 +294,6 @@ class ABOTPView: UIView {
     {
         tfl.backgroundColor = enteredOTPViewFilledColor
         tfl.textColor = .clear
-        //setBottomBorder(forTextfields: tfl.tag)
     }
     
     /// Function Call to Show or Hide OTP
@@ -417,6 +414,8 @@ class ABOTPView: UIView {
     
     //MARK:- IBActions
     
+    /// Function call when user tap on button which is placed on top of all 6 textfields/OTP View
+    /// - Parameter sender: UIButton
     @IBAction func btnActivateOTPTapped(_ sender: UIButton) {
         if originalText == ""
         {
@@ -449,6 +448,7 @@ class ABOTPView: UIView {
 }
 
 //MARK:- Extensions
+//MARK:- UITextFieldDelegate
 extension ABOTPView: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

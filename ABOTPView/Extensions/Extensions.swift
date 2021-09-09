@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+//MARK:- UIView Extension
 extension UIView {
     
     func loadViewFromNibName(nibName: String) -> UIView? {
@@ -18,6 +19,7 @@ extension UIView {
     
 }
 
+//MARK:- String Extension
 extension String {
     
     /// Detect backspace in textfield
