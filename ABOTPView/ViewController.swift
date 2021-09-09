@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         otpView.unfilledBottomBorderColor = .white // Bottom Border Color Where OTP is not Entered
         otpView.enteredOTPViewTextColor = .white // OTP Entered and is visible/Shown to user eg:- 123445
         otpView.enteredOTPViewFilledColor = .yellow // OTP Entered and is hidden to user with round circles
+        otpView.otpSize = .small
         otpView.setInitialOTPView() // Setup OTP View
     }
 

@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ABOTPView" customModule="ABOTPView" customModuleProvider="target">
             <connections>
+                <outlet property="cStkViewHeight" destination="gn1-ye-sFc" id="CJp-qc-L5S"/>
+                <outlet property="cStkViewWidth" destination="I1H-b0-90w" id="WHr-Ss-Ws5"/>
                 <outlet property="txtOTP1" destination="hNH-P6-TMG" id="ves-gP-LaZ"/>
                 <outlet property="txtOTP2" destination="7Lt-ee-0AK" id="0aX-71-fVa"/>
                 <outlet property="txtOTP3" destination="cTp-w1-aft" id="5qc-g0-53X"/>

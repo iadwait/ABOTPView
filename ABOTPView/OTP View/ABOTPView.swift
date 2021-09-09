@@ -13,6 +13,13 @@ protocol ABOTPViewDelegate {
     func userEnteredOTP(otp: String)
 }
 
+/// Enum to Decide Size of OTP Circles
+enum otpSize {
+    case small
+    case medium
+    case large
+}
+
 /// This is Reusable Class that wil help you achieve Circular OTP View
 class ABOTPView: UIView {
     
@@ -23,6 +30,9 @@ class ABOTPView: UIView {
     @IBOutlet weak var txtOTP4: MyTextField!
     @IBOutlet weak var txtOTP5: MyTextField!
     @IBOutlet weak var txtOTP6: MyTextField!
+    //Constraints
+    @IBOutlet weak var cStkViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var cStkViewHeight: NSLayoutConstraint!
     
     //MARK:- Variable Declarations
     var curTflTag = 0
@@ -37,6 +47,7 @@ class ABOTPView: UIView {
     var unfilledBottomBorderColor: UIColor = UIColor.darkGray
     var enteredOTPViewTextColor: UIColor = UIColor.green // When OTP is Entered(Shown) - Text/Number Shown Color
     var enteredOTPViewFilledColor: UIColor = UIColor.darkGray// When OTP is Entered(Hidden) - Fill Color
+    var otpSize: otpSize = .medium // Size of OTP Fields
     
     //MARK:- View Xib Setup
     override init(frame: CGRect) {
@@ -65,6 +76,18 @@ class ABOTPView: UIView {
     func setInitialOTPView()
     {
         self.backgroundColor = .clear
+     
+        if otpSize == .small {
+            cStkViewWidth.constant = 170
+            cStkViewHeight.constant = 20
+        } else if otpSize == .medium {
+            cStkViewWidth.constant = 200
+            cStkViewHeight.constant = 25
+        } else if otpSize == .large {
+            cStkViewWidth.constant = 230
+            cStkViewHeight.constant = 30
+        }
+        self.layoutIfNeeded()
         
         txtOTP1.tag = 1
         txtOTP2.tag = 2
@@ -122,7 +145,13 @@ class ABOTPView: UIView {
     {
         let layer = CALayer()
         layer.backgroundColor = color.cgColor
-        layer.frame = .init(x: 0, y: tfl.frame.size.height + 4.0, width: tfl.frame.size.width + 5.0, height: 2.0)
+        if otpSize == .small {
+            layer.frame = .init(x: 0, y: tfl.frame.size.height + 4.0, width: tfl.frame.size.width + 5.0, height: 2.0)
+        } else if otpSize == .medium {
+            layer.frame = .init(x: 0, y: tfl.frame.size.height + 4.0, width: tfl.frame.size.width + 5.0, height: 2.0)
+        } else if otpSize == .large {
+            layer.frame = .init(x: 0, y: tfl.frame.size.height + 4.0, width: tfl.frame.size.width + 5.0, height: 2.0)
+        }
         tfl.layer.addSublayer(layer)
     }
     
